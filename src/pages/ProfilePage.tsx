@@ -1,7 +1,10 @@
 
 import { User, Settings, Heart, Clock, MapPin } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const ProfilePage = () => {
+  const navigate = useNavigate();
+
   // Mock user data
   const user = {
     name: "Guest User",
@@ -47,6 +50,12 @@ const ProfilePage = () => {
       timestamp: "1 week ago",
     },
   ];
+
+  // Handler for switching to vendor mode
+  const handleSwitchToVendorMode = () => {
+    // You can replace "1" with the actual vendor/user id when available
+    navigate("/vendor/1");
+  };
 
   return (
     <div className="pb-20">
@@ -153,7 +162,10 @@ const ProfilePage = () => {
             <Settings className="w-5 h-5 mr-2 text-tastetrail-blue" />
             Preferences
           </button>
-          <button className="bg-white w-full py-3 rounded-lg shadow-sm text-tastetrail-text font-poppins font-medium flex items-center justify-center">
+          <button
+            className="bg-white w-full py-3 rounded-lg shadow-sm text-tastetrail-text font-poppins font-medium flex items-center justify-center"
+            onClick={handleSwitchToVendorMode}
+          >
             <User className="w-5 h-5 mr-2 text-tastetrail-blue" />
             Switch to Vendor Mode
           </button>
@@ -164,3 +176,4 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
+
