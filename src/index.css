@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Additional styles for TasteTrail app */
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+  background-color: #F2F2F2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

@@ -17,6 +17,10 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		fontFamily: {
+			'poppins': ['Poppins', 'sans-serif'],
+			'roboto': ['Roboto', 'sans-serif'],
+		},
 		extend: {
 			colors: {
 				border: 'hsl(var(--border))',
@@ -25,8 +29,15 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: '#FF6B35',
+					foreground: '#FFFFFF'
+				},
+				tastetrail: {
+					orange: '#FF6B35',
+					blue: '#004E89',
+					yellow: '#FFCA3A',
+					lightgray: '#F2F2F2',
+					text: '#333333'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
